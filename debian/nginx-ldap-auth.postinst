@@ -9,6 +9,6 @@ getent passwd nginx-ldap-auth > /dev/null || \
 
 install -d -m755 -o nginx-ldap-auth -g nginx-ldap-auth /var/log/nginx-ldap-auth
 
-systemctl reload rsyslog
+systemctl restart rsyslog
 
 #DEBHELPER#
