@@ -4,6 +4,8 @@ Section: misc
 Priority: optional
 Standards-Version: 3.9.7
 Build-Depends: debhelper (>= 9), dh-systemd, python, dh-python, dh-exec
+Vcs-Browser: https://github.com/hpaluch-pil/nginx-ldap-auth
+Vcs-Git: https://github.com/hpaluch-pil/nginx-ldap-auth.git
 
 Package: nginx-ldap-auth
 Architecture: all
