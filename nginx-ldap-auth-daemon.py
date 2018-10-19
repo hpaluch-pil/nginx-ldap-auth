@@ -1,6 +1,4 @@
-#!/bin/sh
-''''which python2 >/dev/null && exec python2 -u "$0" "$@" &>>$LOG # '''
-''''which python  >/dev/null && exec python  -u "$0" "$@" &>>$LOG # '''
+#!/usr/bin/python2 -u
 
 # Copyright (C) 2014-2015 Nginx, Inc.
 
@@ -190,6 +188,8 @@ class LDAPAuthHandler(AuthHandler):
                 return 
 
             ctx['action'] = 'initializing LDAP connection'
+            # enable TLS: from https://stackoverflow.com/a/45092837
+            ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_ALLOW)
             ldap_obj = ldap.initialize(ctx['url']);
 
             # See http://www.python-ldap.org/faq.shtml
