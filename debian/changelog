@@ -1,5 +1,12 @@
-nginx-ldap-auth (0.0.3-1) UNRELEASED; urgency=low
+nginx-ldap-auth (0.0.3-1.1) UNRELEASED; urgency=low
 
+  [ Ippolitov Igor ]
   * Initial release
 
- -- Ippolitov Igor <iippolitov@nginx.com>  Wed, 02 Nov 2016 14:32:15 +0300
+  [ Henryk Paluch ]
+  * removed SYS V init scripts (no longer used)
+  * added TLS options
+  * redirect output to log file (specific for systemd)
+
+ -- Henryk Paluch <henryk.paluch@pickering.cz>  Fri, 19 Oct 2018 10:12:26 +0000
+
